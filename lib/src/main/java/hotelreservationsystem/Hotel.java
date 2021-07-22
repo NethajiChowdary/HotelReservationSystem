@@ -1,7 +1,6 @@
 package hotelreservationsystem;
 
-public class Hotel
-{
+public class Hotel {
 
 	private String name;
 	private int regularWeekdayRate;
