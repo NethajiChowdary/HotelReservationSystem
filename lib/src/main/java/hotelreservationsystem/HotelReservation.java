@@ -47,15 +47,14 @@ public class HotelReservation
 		this.hotels.stream().forEach(
 				n -> hotelCosts.put(n.getRegularWeekdayRate() * weekDays + n.getRegularWeekendRate() * weekendDays, n));
 		Integer cheap = hotelCosts.keySet().stream().min(Integer::compare).get();
-		hotelCosts.forEach((k, v) ->{
+		hotelCosts.forEach((k, v) -> {
 			if (k == cheap)
 				sortedHotelCosts.put(k, v);
 		});
 		return sortedHotelCosts;
 	}
 
-	public int countTotalDays(String date1, String date2) 
-	{
+	public int countTotalDays(String date1, String date2) {
 
 		LocalDate startDate = toLocalDate(date1);
 		LocalDate endDate = toLocalDate(date2);
